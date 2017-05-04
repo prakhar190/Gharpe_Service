@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  database: gharpe
+  host: localhost
+  timeout: 5000
+  username: postgres
+  password: postgres
+
+test:
+  adapter: postgresql
+  database: gharpe_test
+  host: localhost
+  timeout: 5000
+  username: postgres
+  password: password
+
+production:
+  adapter: postgresql
+  database: gharpe_dev
+  host: localhost
+  timeout: 5000
