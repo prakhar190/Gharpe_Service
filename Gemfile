@@ -30,6 +30,14 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'activeadmin'
+gem 'cancan' # or cancancan
+gem 'draper', '3.0.0.pre1'
+gem 'pundit'
+gem 'rails_workflow'
+gem 'activemodel-serializers-xml'
+gem 'responders', github: 'plataformatec/responders'
+gem 'country_select'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
