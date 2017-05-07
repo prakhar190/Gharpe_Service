@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504200056) do
+ActiveRecord::Schema.define(version: 20170507033444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,10 +84,10 @@ ActiveRecord::Schema.define(version: 20170504200056) do
     t.integer  "quantity"
     t.integer  "price"
     t.integer  "star_ratings"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.integer  "product_categories_id"
-    t.index ["product_categories_id"], name: "index_products_on_product_categories_id", using: :btree
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "product_category_id"
+    t.index ["product_category_id"], name: "index_products_on_product_category_id", using: :btree
   end
 
   create_table "services", force: :cascade do |t|
@@ -95,10 +95,10 @@ ActiveRecord::Schema.define(version: 20170504200056) do
     t.string   "name"
     t.boolean  "active"
     t.boolean  "trending"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "categories_id"
-    t.index ["categories_id"], name: "index_services_on_categories_id", using: :btree
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+    t.index ["category_id"], name: "index_services_on_category_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -128,6 +128,6 @@ ActiveRecord::Schema.define(version: 20170504200056) do
   end
 
   add_foreign_key "feedbacks", "users", column: "users_id"
-  add_foreign_key "products", "product_categories", column: "product_categories_id"
-  add_foreign_key "services", "categories", column: "categories_id"
+  add_foreign_key "products", "product_categories"
+  add_foreign_key "services", "categories"
 end
