@@ -1,0 +1,18 @@
+development:
+  cloud_name: dqpmb2hfb
+  api_key: '472589347797696'
+  api_secret: Q6U5HLVpEuoj9x_MeCaqtp6vl3c
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dqpmb2hfb
+  api_key: '472589347797696'
+  api_secret: Q6U5HLVpEuoj9x_MeCaqtp6vl3c
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dqpmb2hfb
+  api_key: '472589347797696'
+  api_secret: Q6U5HLVpEuoj9x_MeCaqtp6vl3c
+  enhance_image_tag: true
+  static_image_support: false

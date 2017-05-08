@@ -40,6 +40,7 @@ gem 'responders', github: 'plataformatec/responders'
 gem 'country_select'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'cloudinary'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

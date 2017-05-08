@@ -1,4 +1,4 @@
-class ServiceUploader < CarrierWave::Uploader::Base
+class ProductUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave 
 
   # Include RMagick or MiniMagick support:
