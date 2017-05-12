@@ -299,3 +299,20 @@ hr.style15:after {
     height: 80px;
     width: 60px;
 }
+.selectpicker{
+  height:40px;
+  padding: 0.2em
+}
+
+#timepicker, #datepicker{
+  width: 100%;
+}
+
+.flash-message{
+  position: absolute;
+  top: 5em;
+  right: 2em;
+  width: 26%;
+  text-align: center;
+  z-index: 10;
+}

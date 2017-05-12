@@ -45,33 +45,26 @@
           </div>
         </div>
         <div class="row padd-bottom30 padd-top20">
-          <div class="col-md-2 col-md-offset-1 height40">
-            <select class="js-example-basic-single width-full">
-              <option value="AL">Alabama</option>
-              <option value="WY">Wyoming</option>
-              <option value="AL">Alabama</option>
-              <option value="WY">Wyoming</option>
-              <option value="AL">Alabama</option>
-              <option value="WY">Wyoming</option>
-              <option value="AL">Alabama</option>
-              <option value="WY">Wyoming</option>
-            </select>
-            <!-- <i class="fa fa-chevron-down i-inner1" aria-hidden="true"></i> -->
-          </div>
-          <div class="col-md-2 padd-left0">
-            <input type="text" name="" placeholder="Postal Code" class="height40 width-full padd-left10 corner brdr-none">
-          </div>
-          <div class="col-md-2 padd-left0">
-            <input type="text" name="" placeholder="Prefered-Date" class="height40 width-full padd-left10 corner brdr-none">
-            <img src="images/prefered-date.png" class="i-inner">
-          </div>
-          <div class="col-md-2 padd-left0">
-            <input type="text" name="" placeholder="Prefered-Time" class="height40 width-full padd-left10 corner brdr-none">
-            <img src="images/prefered-time.png" class="i-inner">
-          </div>
-          <div class="col-md-2 padd-left0">
-            <input type="button" name="" value="SUBMIT" class="btn-submit width-full height40">
-          </div>
+          <%= form_tag("/book_service", method: "post") do %>
+            <div class="col-md-2 col-md-offset-1 height40">
+              <%= select_tag "booked_service[service_id]", options_from_collection_for_select(@service, "id", "name"), class: 'selectpicker' %>
+            </div>
+    
+            <div class="col-md-2 padd-left0">
+              <%= text_field_tag 'booked_service[postal_code]', '' ,placeholder: 'Postal Code', class: 'height40 width-full padd-left10 corner brdr-none' %>
+            </div>
+            <div class="col-md-2 padd-left0">
+              <%= text_field_tag 'booked_service[preffered_date]', '' ,placeholder: 'Preffered-Date', class: 'height40 width-full padd-left10 corner brdr-none', id: 'datepicker'%>
+              <img src="images/prefered-date.png" class="i-inner">
+            </div>
+            <div class="col-md-2 padd-left0">
+              <%= text_field_tag 'booked_service[preffered_time]', '' ,placeholder: 'Preffered-Time', class: 'height40 width-full padd-left10 corner brdr-none', id: 'timepicker' %>
+              <img src="images/prefered-time.png" class="i-inner">
+            </div>
+            <div class="col-md-2 padd-left0">
+              <%= submit_tag "Submit", class: 'btn-submit width-full height40' %>
+            </div>
+          <% end %>
         </div>
         <div class="row padd-bottom30">
           <div class="col-md-12 text-white text-center">
