@@ -1,4 +1,1197 @@
-<div class = 'container'>
-  <h1>Welcome to Gharpe Services</h1>
-  <p>One site to get all the services</p>
-</div>
+<div class="container-box">
+    <div class="row banner padd-top10 padd-bottom30">
+      <div class="m1170">
+        <div class="col-md-2">
+          <img src="/images/logo.png"> 
+        </div>
+        <div class="col-md-10 text-right">
+          <div class="row">
+            <div class="col-md-3 col-md-offset-7">
+              <a href="#" class="a-hover">
+                Become a Professional
+              </a>
+            </div>
+            <% if current_user %>
+              <div class='com-md-2 padd-right0'>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+              </div>
+            <% else %>
+              <div class="col-md-2 padd-right0">
+                <a href="/users/sign_in" class="a-hover">Login/SignUP</a>
+              </div>
+            <% end %>
+          </div>
+          <hr/>
+          <div class="row padd-bottom30">
+            <div class="col-md-2 col-md-offset-4">
+              <a href="#" class="a-hover">ABOUT US</a>
+            </div>
+            <div class="col-md-2">
+              <a href="#" class="a-hover">PRODUCTS</a>
+            </div>
+            <div class="col-md-2">
+              <a href="#" class="a-hover">HOW IT WORKS</a>
+            </div>
+            <div class="col-md-2 padd-right0">
+              <a href="#" class="a-hover">CONTACT US</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 padd-top100">
+            <h1 class="text-center text-white bold">Hire Professionals for Home
+            </h1>
+            <h4 class=" text-center text-white">Book Instantly or Compare Quotes</h4>
+          </div>
+        </div>
+        <div class="row padd-bottom30 padd-top20">
+          <div class="col-md-2 col-md-offset-1 height40">
+            <select class="js-example-basic-single width-full">
+              <option value="AL">Alabama</option>
+              <option value="WY">Wyoming</option>
+              <option value="AL">Alabama</option>
+              <option value="WY">Wyoming</option>
+              <option value="AL">Alabama</option>
+              <option value="WY">Wyoming</option>
+              <option value="AL">Alabama</option>
+              <option value="WY">Wyoming</option>
+            </select>
+            <!-- <i class="fa fa-chevron-down i-inner1" aria-hidden="true"></i> -->
+          </div>
+          <div class="col-md-2 padd-left0">
+            <input type="text" name="" placeholder="Postal Code" class="height40 width-full padd-left10 corner brdr-none">
+          </div>
+          <div class="col-md-2 padd-left0">
+            <input type="text" name="" placeholder="Prefered-Date" class="height40 width-full padd-left10 corner brdr-none">
+            <img src="images/prefered-date.png" class="i-inner">
+          </div>
+          <div class="col-md-2 padd-left0">
+            <input type="text" name="" placeholder="Prefered-Time" class="height40 width-full padd-left10 corner brdr-none">
+            <img src="images/prefered-time.png" class="i-inner">
+          </div>
+          <div class="col-md-2 padd-left0">
+            <input type="button" name="" value="SUBMIT" class="btn-submit width-full height40">
+          </div>
+        </div>
+        <div class="row padd-bottom30">
+          <div class="col-md-12 text-white text-center">
+            <span>E.g</span>&emsp;
+            <span class="eg-span">Ac Repairs</span>&emsp;
+            <span class="eg-span">Movers</span>&emsp;
+            <span class="eg-span">Plumbing</span>&emsp;
+            <span class="eg-span">Electrician</span>&emsp;
+            <span class="eg-span">Home Cleaning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row padd-bottom30 padd-top30 bg-gray">
+      <div class="m1170">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+    <div class="row padd-top30 padd-bottom30">
+      <div class="m1170">
+        <div class="col-md-12">
+          <span class="h3">Trending Services</span>
+        </div>
+            <div class="row">
+                <div class="col-md-12 padd-bottom10">
+                  <!-- Controls -->
+                    <div class="controls pull-right">
+                          <a class="left fa" href="#carousel-example" data-slide="prev">
+                            <img src="images/prev.png" class="img-prev">
+                          </a>
+                          <a class="right fa" href="#carousel-example" data-slide="next">
+                            <img src="images/next.png" class="img-next">
+                          </a>
+                      </div>
+                </div>
+            </div>
+            <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                    <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>AC Services</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Dietician</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                  <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Bathroom & Deep Clean</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Bathroom & Deep Clean</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                    <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Electrician</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Electrician</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                    <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Carpenter</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Carpenter</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                    <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>AC Services</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>CarpenterServices</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                  <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Plumber</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Plumber</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                    <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Packers & Movers</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Packers & Movers</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col-item">
+                                    <ul>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Yoga</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <li class="card-li">
+                                      <div class="photo">
+                                          <img src="images/ac-services-&-repair.png" class="img-responsive" alt="a" />
+                                      </div>
+                                      <div class="info">
+                                          <div class="row">
+                                              <div class="price col-md-12">
+                                                  <h4>Yoga</h4>
+                                              </div>
+                                          </div>
+                                          <div class="clearfix">
+                                          </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+    <div class="row bg-gray">
+      <div class="m1170">
+        <div class="col-md-12 padd-top30">
+          <h3>Kitchen &amp; Bathroom Fitting</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-9 padd-right0">
+            <div class="row">
+                <div class="col-md-12 height-0">
+                    <!-- Controls -->
+                    <div class="controls">
+                            <a class="left fa fa-chevron-left btn1" href="#carousel-example-generic" data-slide="prev"></a>
+                              <a class="right fa fa-chevron-right btn2 pull-right" href="#carousel-example-generic" data-slide="next"></a>
+                        </div>
+                </div>
+            </div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3 padd-left0">
+            <img src="images/bathrum-and-kitchen-shower.png" class="img-kitchen-shower">
+          </div>
+        </div>
+        <!-- second carousel -->
+        <div class="row">
+          <div class="col-md-12 padd-top30">
+          <h3>Electrical Equipments</h3>
+          </div>
+        </div>
+        <div class="row padd-bottom30">
+          <div class="col-md-3 padd-right0 padd-bottom30">
+            <img src="images/bathrum-and-kitchen-shower.png" class="img-kitchen-shower">
+          </div>
+          <div class="col-md-9 padd-left0 padd-bottom30">
+            <div class="row">
+                <div class="col-md-12 height-0">
+                    <!-- Controls -->
+                    <div class="controls">
+                            <a class="left fa fa-chevron-left btn1" href="#carousel-example-generic1" data-slide="prev"></a>
+                              <a class="right fa fa-chevron-right btn2 pull-right" href="#carousel-example-generic1" data-slide="next"></a>
+                        </div>
+                </div>
+            </div>
+            <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 block-carousel">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="images/shower-rail.png" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <p>Shower Rail</p>
+                                                <p>SWSRA0001CR</p>
+                                                <P class="price-text-color">
+                                                  <s class="op7">Rs. 1099</s> Rs. 999
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="separator col-md-12">
+                                              <p>
+                                                <span class="persent-off">
+                                                  31% Off
+                                                </span>
+                                              </p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating col-md-12">
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star"></i>
+                                                <i class="i-star fa fa-star">
+                                                </i>
+                                                <i class="i-star fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row padd-bottom30">
+      <div class="m1170">
+      <div class="col-md-12 text-center padd-top30 padd-bottom30">
+        <h3>How It Works </h3>
+      </div>
+      <div class="row padd-bottom30">
+        <div class="col-md-4 text-center">
+          <hr class="style15" />
+          <div class="img-circle">
+            <img src="images/book-your-services.png" class="img-book-service">
+          </div>
+          <h4>Book Your Services</h4>
+          <p>Conceture the adiciping elevimous <br /> Conceture the adiciping elevimous Conceture<br /> the adiciping elevimous</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <hr class="style15" />
+          <div class="img-circle">
+            <img src="images/set-your-preffred-time.png" class="img-book-service">
+          </div>
+          <h4>Set Your Preffered Time</h4>
+          <p>Conceture the adiciping elevimous <br /> Conceture the adiciping elevimous Conceture<br /> the adiciping elevimous</p>
+        </div>
+        <div class="col-md-4 text-center" >
+          <div class="img-circle">
+            <img src="images/expert-solution-delivered.png" class="img-book-service">
+          </div>
+          <h4>Expert Solution Delivered</h4>
+          <p>Conceture the adiciping elevimous <br /> Conceture the adiciping elevimous Conceture<br /> the adiciping elevimous</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row banner-home-service">
+      <div class="m1170">
+        <div class="col-md-12 text-center text-white padd-top30 padd-bottom30">
+          <h3>India's Largest Home Service Provider</h3>
+        </div>
+        <div class="row padd-bottom30">
+          <div class="col-md-4 col-md-offset-2 brdr-right">
+            <ul class="ul-inline">
+              <li class="li-img margin-rt20">
+                <img src="images/happy-customer.png">
+              </li>
+              <li class="li-txt">
+                <span class="text-white span-number bold">1,0,000+</span><br />
+                <span class="text-white span-happy">Happy Customers</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-md-offset-1">
+            <ul class="ul-inline">
+              <li class="li-img margin-rt20">
+                <img src="images/trusteded-services-provider.png">
+              </li>
+              <li class="li-txt">
+                <span class="text-white span-number bold">1,000+</span><br />
+                <span class="text-white span-happy">Trusted Services Providers</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 padd-bottom30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row padd-bottom30 padd-top30">
+      <div class="m1170">
+        <div class="col-md-3 text-center padd-bottom30 padd-top30">
+          <img src="images/request-anytime-anywhere.png" class="img-request padd-bottom20">
+          <h5>Request,anytime, anywhere</h5>
+          <p class="op7 padd-lr30">with our application, you're always a few taps away from making a request.</p>
+        </div>
+        <div class="col-md-3 text-center padd-bottom30 padd-top30">
+          <img src="images/expirinced-proffesinal.png" class="img-request padd-bottom20">
+          <h5>Experienced Professional</h5>
+          <p class="op7 padd-lr30">ghar pay professional are called champs for a reason, as they perform their duties width diligence and grace.</p>
+        </div>
+        <div class="col-md-3 text-center padd-bottom30 padd-top30">
+          <img src="images/satisfaction-guranteed.png" class="img-request padd-bottom20">
+          <h5>Satisfaction Guranteed</h5>
+          <p class="op7 padd-lr30">We hire only the most qualified professional to ensure high quality services.</p>
+        </div>
+        <div class="col-md-3 text-center padd-bottom30 padd-top30">
+          <img src="images/safe-and-easy-payment.png" class="img-request padd-bottom20">
+          <h5>Safe and Easy Payment</h5>
+          <p class="op7 padd-lr30">We ensure that you always have more to choose From! Ghar Pay provides cash, credit/debit and net-banking facilities</p>
+        </div>
+      </div>
+    </div>
+  </div>
