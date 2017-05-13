@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508181533) do
+ActiveRecord::Schema.define(version: 20170513144149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,8 +52,10 @@ ActiveRecord::Schema.define(version: 20170508181533) do
     t.string   "postal_code"
     t.integer  "user_id"
     t.integer  "service_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.integer  "service_provider_id"
+    t.boolean  "approved",            default: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -89,6 +91,18 @@ ActiveRecord::Schema.define(version: 20170508181533) do
     t.integer  "product_category_id"
     t.string   "image"
     t.index ["product_category_id"], name: "index_products_on_product_category_id", using: :btree
+  end
+
+  create_table "service_providers", force: :cascade do |t|
+    t.string   "code"
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "postal_code"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "services", force: :cascade do |t|
