@@ -1,9 +1,14 @@
 class ServicesController < ApplicationController
 
 	def book_service
-		BookedService.create(booked_service_params)
-		flash[:success] = "Service Booked successfully"
-		redirect_to root_path
+		if current_user
+			BookedService.create(booked_service_params)
+			flash[:success] = "Service Booked successfully"
+			redirect_to root_path
+		else
+			session[:booked_service] = params[:booked_service]
+	  	redirect_to '/users/sign_in'
+		end
 	end
 
 	private

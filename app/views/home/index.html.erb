@@ -61,6 +61,9 @@
               <%= text_field_tag 'booked_service[preffered_time]', '' ,placeholder: 'Preffered-Time', class: 'height40 width-full padd-left10 corner brdr-none', id: 'timepicker' %>
               <img src="images/prefered-time.png" class="i-inner">
             </div>
+            <% if current_user %>
+              <%= hidden_field_tag 'booked_service[user_id]', current_user.id %>
+            <% end %>
             <div class="col-md-2 padd-left0">
               <%= submit_tag "Submit", class: 'btn-submit width-full height40' %>
             </div>
