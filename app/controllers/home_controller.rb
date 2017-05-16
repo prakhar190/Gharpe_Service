@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@service=Service.all
+  	@service=Service.where('trending = ?',true)
   end
 end
