@@ -133,14 +133,11 @@
                           <% end %>
                         </div>
                     </div>
-                    5.times do |i|
-                      puts i
-                    end
                     <%if @item_count >=  1 %>
                       <% @item_count.times do |i| %>
                         <div class="item">
                             <div class="row">
-                              <% @service.drop(8*i).first(8).each do |service, index| %>
+                              <% @service.drop(8*(i+1)).first(8).each do |service, index| %>
                                 <div class="col-md-3">
                                   <div class="col-item">
                                     <ul>
