@@ -17,7 +17,7 @@
             </div>
           <% else %>
             <div class="col-md-2 padd-right0">
-              <a href="/users/sign_in" class="a-hover">Login/SignUP</a>
+              <a href="/users/sign_in" class="a-hover open-modal" data-toggle="modal" data-target="#myModal" >Login/SignUP</a>
             </div>
           <% end %>
         </div>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="row padd-bottom30 padd-top20">
-        <%= form_tag("/book_service", method: "post") do %>
+        <%= form_tag("/book_service", method: "post", id: 'booked-service-form') do %>
           <div class="col-md-2 col-md-offset-1 height40">
             <%= select_tag "booked_service[service_id]", options_from_collection_for_select(@service, "id", "name"), class: 'selectpicker' %>
           </div>
@@ -64,9 +64,15 @@
           <% if current_user %>
             <%= hidden_field_tag 'booked_service[user_id]', current_user.id %>
           <% end %>
-          <div class="col-md-2 padd-left0">
-            <%= submit_tag "Submit", class: 'btn-submit width-full height40' %>
-          </div>
+          <% if current_user %>
+            <div class="col-md-2 padd-left0">
+              <%= submit_tag "Submit", class: 'btn-submit width-full height40' %>
+            </div>
+          <% else %>
+            <div class= 'col-md-2 padd-left0'>
+              <%= submit_tag "Submit", class: 'btn-submit width-full height40 book-service' %>
+            </div>
+          <% end %>
         <% end %>
       </div>
       <div class="row padd-bottom30">
@@ -965,5 +971,17 @@
         <p class="op7 padd-lr30">We ensure that you always have more to choose From! Ghar Pay provides cash, credit/debit and net-banking facilities</p>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+    </div>
+
   </div>
 </div>

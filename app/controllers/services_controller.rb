@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+	skip_before_filter :verify_authenticity_token, :only => :book_service
 
 	def book_service
 		if current_user
@@ -7,7 +8,6 @@ class ServicesController < ApplicationController
 			redirect_to root_path
 		else
 			session[:booked_service] = params[:booked_service]
-	  	redirect_to '/users/sign_in'
 		end
 	end
 
