@@ -35,6 +35,7 @@ $(document).on('turbolinks:load', function() {
     $('#booked_service_hours_booked').val($(this).val());
     charge = ratePerHour*$(this).val();
     $('.total-amount').text(charge);
+    $('#stripeAmount').val(charge);
   });
   $('.pay-later').click(function(e){
     document.getElementById("booked-service-form").submit();
@@ -52,5 +53,6 @@ function getRatePerHour(){
     ratePerHour= data.rate;
     charge = ratePerHour;
     $('.total-amount').text(charge);
+      $('#stripeAmount').val(charge);
   });
 }

@@ -999,10 +999,32 @@
       <div class="modal-body">
         <p> For how much time do u need the service?</p>
         <%= select_tag "hours_booked", get_hours_for_booking %>
-        <p> You have to pay Rs <span class='total-amount'> </span>
+        <label class="amount">
+          <span> Amount Rs.<span class='total-amount'> </span></span>
+        </label>
         <br />
-        <button type="button" class="btn btn-primary pay-later">Pay Later</button>
-        <button type="button" class="btn btn-success">Pay Now</button>
+        <button type="button" class="btn btn-success pay-later">Pay Later</button>
+        <!-- <button type="button" class="btn btn-success">Pay Now</button> -->
+        <%= form_tag charges_path do %>
+          <article>
+            <%= hidden_field_tag 'stripeAmount' %>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="A one time charge for service"
+                  data-currency="inr"
+                  data-email="<%=current_user.email%>"
+                  data-amount=''
+                  data-label="Pay Now"
+                  data-locale="auto">
+          </script>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
