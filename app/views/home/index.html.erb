@@ -47,26 +47,26 @@
       <div class="row padd-bottom30 padd-top20">
         <%= form_tag("/book_service", method: "post", id: 'booked-service-form') do %>
           <div class="col-md-2 col-md-offset-1 height40">
-            <%= select_tag "booked_service[service_id]", options_from_collection_for_select(@service, "id", "name"), class: 'selectpicker' %>
+            <%= select_tag "booked_service[service_id]", options_from_collection_for_select(@service, "id", "name", @selected_service), class: 'selectpicker' %>
           </div>
 
           <div class="col-md-2 padd-left0">
-            <%= text_field_tag 'booked_service[postal_code]', '' ,placeholder: 'Postal Code', class: 'height40 width-full padd-left10 corner brdr-none' %>
+            <%= text_field_tag 'booked_service[postal_code]', '' ,placeholder: 'Postal Code', class: 'height40 width-full padd-left10 corner brdr-none', value: @postal_code%>
           </div>
           <div class="col-md-2 padd-left0">
-            <%= text_field_tag 'booked_service[preffered_date]', '' ,placeholder: 'Preffered-Date', class: 'height40 width-full padd-left10 corner brdr-none', id: 'datepicker'%>
+            <%= text_field_tag 'booked_service[preffered_date]', '' ,placeholder: 'Preffered-Date', class: 'height40 width-full padd-left10 corner brdr-none', id: 'datepicker', value: @preffered_date%>
             <img src="images/prefered-date.png" class="i-inner">
           </div>
           <div class="col-md-2 padd-left0">
-            <%= text_field_tag 'booked_service[preffered_time]', '' ,placeholder: 'Preffered-Time', class: 'height40 width-full padd-left10 corner brdr-none', id: 'timepicker' %>
+            <%= text_field_tag 'booked_service[preffered_time]', '' ,placeholder: 'Preffered-Time', class: 'height40 width-full padd-left10 corner brdr-none', id: 'timepicker', value: @preffered_time %>
             <img src="images/prefered-time.png" class="i-inner">
           </div>
+          <%= hidden_field_tag 'booked_service[hours_booked]', 1 %>
           <% if current_user %>
             <%= hidden_field_tag 'booked_service[user_id]', current_user.id %>
-          <% end %>
-          <% if current_user %>
             <div class="col-md-2 padd-left0">
-              <%= submit_tag "Submit", class: 'btn-submit width-full height40' %>
+              <%#= submit_tag "Submit", class: 'btn-submit width-full height40' %>
+              <button type="button" class="btn-submit width-full height40 open-payement-modal" data-toggle="modal" data-target="#paymentModal">Submit</button>
             </div>
           <% else %>
             <div class= 'col-md-2 padd-left0'>
@@ -985,3 +985,35 @@
 
   </div>
 </div>
+
+<!-- Modal -->
+<div id="paymentModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">One last step</h4>
+      </div>
+      <div class="modal-body">
+        <p> For how much time do u need the service?</p>
+        <%= select_tag "hours_booked", get_hours_for_booking %>
+        <p> You have to pay Rs <span class='total-amount'> </span>
+        <br />
+        <button type="button" class="btn btn-primary pay-later">Pay Later</button>
+        <button type="button" class="btn btn-success">Pay Now</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<% if @preffered_date.present? %>
+  <script type='text/javascript'>
+    $('.open-payement-modal').click();
+  </script>
+<% end %>

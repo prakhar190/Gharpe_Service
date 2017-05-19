@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513144149) do
+ActiveRecord::Schema.define(version: 20170519101427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20170513144149) do
     t.datetime "updated_at",                          null: false
     t.integer  "service_provider_id"
     t.boolean  "approved",            default: false
+    t.integer  "hours_booked"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -110,10 +111,11 @@ ActiveRecord::Schema.define(version: 20170513144149) do
     t.string   "name"
     t.boolean  "active"
     t.boolean  "trending"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "category_id"
     t.string   "image"
+    t.integer  "rate_per_hour"
     t.index ["category_id"], name: "index_services_on_category_id", using: :btree
   end
 
