@@ -1009,6 +1009,12 @@
           <%= form_tag charges_path do %>
             <article>
               <%= hidden_field_tag 'stripeAmount' %>
+              <%= hidden_field_tag "service_booked[service_id]"%>
+              <%= hidden_field_tag 'service_booked[postal_code]'%>
+              <%= hidden_field_tag 'service_booked[preffered_date]'%>
+              <%= hidden_field_tag 'service_booked[preffered_time]'%>
+              <%= hidden_field_tag 'service_booked[hours_booked]'%>
+              <%= hidden_field_tag 'service_booked[user_id]', current_user.id %>
               <% if flash[:error].present? %>
                 <div id="error_explanation">
                   <p><%= flash[:error] %></p>

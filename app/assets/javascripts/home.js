@@ -41,10 +41,16 @@ $(document).on('turbolinks:load', function() {
     document.getElementById("booked-service-form").submit();
   });
   getRatePerHour();
-  if ($.cookie('service_id')){
-    alert('prakhar sharma')
- //no cookie
-  }
+
+  $('.stripe-button-el').click(function(e){
+    $('#service_booked_service_id').val($('#booked_service_service_id').val());
+    $('#service_booked_postal_code').val($('#booked_service_postal_code').val());
+    $('#service_booked_preffered_date').val($('#booked_service_preffered_date').val());
+    $('#service_booked_preffered_time').val($('#booked_service_preffered_time').val());
+    $('#service_booked_hours_booked').val($('#booked_service_hours_booked').val());
+    $('#service_booked_user_id').val($('#booked_service_user_id').val());
+  });
+
 
 });
 
