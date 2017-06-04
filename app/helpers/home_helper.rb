@@ -10,10 +10,8 @@ module HomeHelper
     <option value='8'>8 hours</option>".html_safe
   end
 
-  # def get_after_discount_price(price, discount)
-  #   # p_discount = (discount/100)
-  #   return (discount.percent_of(price)) if discount > 0
-  #
-  # end
+  def get_path
+    cookies[:login]? 'users/sign_in' : 'users/sign_up'
+  end
 
 end

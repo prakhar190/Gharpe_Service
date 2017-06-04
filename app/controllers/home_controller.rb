@@ -1,5 +1,11 @@
 class HomeController < ApplicationController
   def index
+    if current_user
+      cookies[:login] = {
+        value: true,
+        expires: 1.year.from_now
+      }
+    end
   	@service=Service.where('trending = ?',true)
   	@item_count = @service.count/8
     @selected_service = cookies[:service_id] ? cookies[:service_id] : 1
