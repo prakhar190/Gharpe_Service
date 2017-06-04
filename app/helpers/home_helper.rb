@@ -9,4 +9,11 @@ module HomeHelper
     <option value='7'>7 hours</option>
     <option value='8'>8 hours</option>".html_safe
   end
+
+  # def get_after_discount_price(price, discount)
+  #   # p_discount = (discount/100)
+  #   return (discount.percent_of(price)) if discount > 0
+  #
+  # end
+
 end

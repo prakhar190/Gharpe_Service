@@ -10,5 +10,6 @@ class HomeController < ApplicationController
     cookies.delete :postal_code
     cookies.delete :preffered_date
     cookies.delete :preffered_time
+    @product_categories = ProductCategory.all
   end
 end
