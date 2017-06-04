@@ -190,10 +190,10 @@
             <div class="row">
                 <div class="col-md-12 height-0">
                     <!-- Controls -->
-                    <div class="controls">
-                            <a class="left fa fa-chevron-left btn1" href="#carousel-example-generic_<%=index %>" data-slide="prev"></a>
-                              <a class="right fa fa-chevron-right btn2 pull-right" href="#carousel-example-generic_<%=index %>" data-slide="next"></a>
-                        </div>
+                  <div class="controls">
+                    <a class="left fa fa-chevron-left btn1" href="#carousel-example-generic_<%=index %>" data-slide="prev"></a>
+                    <a class="right fa fa-chevron-right btn2 pull-right" href="#carousel-example-generic_<%=index %>" data-slide="next"></a>
+                  </div>
                 </div>
             </div>
             <div id="carousel-example-generic_<%=index %>" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -231,13 +231,12 @@
                                         </div>
                                         <div class="row">
                                             <div class="rating col-md-12">
+                                              <% product.star_ratings.times do %>
                                                 <i class="i-star fa fa-star"></i>
-                                                <i class="i-star fa fa-star">
-                                                </i>
-                                                <i class="i-star fa fa-star"></i>
-                                                <i class="i-star fa fa-star">
-                                                </i>
+                                              <% end %>
+                                              <% product.unstar.times do %>
                                                 <i class="i-star fa fa-star-o"></i>
+                                              <% end %>
                                             </div>
                                         </div>
                                         <div class="clearfix">
@@ -284,13 +283,12 @@
                                       </div>
                                       <div class="row">
                                         <div class="rating col-md-12">
+                                          <% product.star_ratings.times do %>
                                             <i class="i-star fa fa-star"></i>
-                                            <i class="i-star fa fa-star">
-                                            </i>
-                                            <i class="i-star fa fa-star"></i>
-                                            <i class="i-star fa fa-star">
-                                            </i>
+                                          <% end %>
+                                          <% product.unstar.times do %>
                                             <i class="i-star fa fa-star-o"></i>
+                                          <% end %>
                                         </div>
                                       </div>
                                       <div class="clearfix">
