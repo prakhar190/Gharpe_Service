@@ -43,7 +43,7 @@ $(document).on('turbolinks:load', function() {
   getRatePerHour();
 
   $('.stripe-button-el').click(function(e){
-    alert('prakhar sharma')
+    // alert('prakhar sharma')
     $('#service_booked_service_id').val($('#booked_service_service_id').val());
     $('#service_booked_postal_code').val($('#booked_service_postal_code').val());
     $('#service_booked_preffered_date').val($('#datepicker').val());
